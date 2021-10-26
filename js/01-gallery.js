@@ -41,8 +41,6 @@ function onImageClick(evt) {
 
   let bigImageLink = evt.target.dataset.source;
   createModalWindow(bigImageLink);
-
-  onEscapeCloseModal();
 }
 
 // Creates modal window using library
@@ -52,10 +50,6 @@ function createModalWindow(link) {
 `);
 
   instance.show();
-}
-
-// Closes modal window using Escape button from keyboard
-function onEscapeCloseModal() {
   window.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
       instance.close();
